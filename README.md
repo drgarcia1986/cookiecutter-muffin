@@ -20,6 +20,9 @@ $ pip install cookiecutter
 $ cookiecutter https://github.com/drgarcia1986/cookiecutter-muffin.git
 ```
 
+## Online example
+[https://cookiecutter-muffin-example.herokuapp.com/](https://cookiecutter-muffin-example.herokuapp.com/).
+
 ## Roadmap
 * Provisioning with Ansible.
 * Containerization with Docker and docker-compose.
