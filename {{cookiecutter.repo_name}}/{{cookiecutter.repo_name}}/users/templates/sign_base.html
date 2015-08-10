@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block style %}
+	{{ super() }}
+		<link rel="stylesheet" href="{{app.cfg.STATIC_PREFIX}}/sign.css">
+{% endblock style%}
+
+{% block navbar %}{% endblock navbar%}
+
+{% block content %}
+
+	{% block sign_form %}
+	{% endblock sign_form %}
+
+{% endblock content%}

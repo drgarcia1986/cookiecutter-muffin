@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% block head %}
+			<meta charset=utf-8 />
+			<title>{% block title %}{{cookiecutter.project_name}}{% endblock title %}</title>
+			{% block style %}
+				<link href="{{app.cfg.STATIC_PREFIX}}/bootstrap.min.css" rel="stylesheet" media="screen">
+			{% endblock style %}
+		{% endblock head %}
+	</head>
+	<body>
+		{% block body %}
+
+			{% block navbar %}
+				{% include "navbar.html" %}
+			{% endblock navbar %}
+
+			<div class="container">
+
+				{% if errors %}
+					{% for error in errors %}
+					<div class="alert alert-danger">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+						{{ error }}
+					</div>
+					{% endfor %}
+				{% endif %}
+
+				{% block content %}
+				{% endblock content %}
+			</div>
+
+			{% block script %}
+				<script src="{{app.cfg.STATIC_PREFIX}}/jquery.min.js"></script>
+				<script src="{{app.cfg.STATIC_PREFIX}}/bootstrap.min.js"></script>
+			{% endblock script %}
+
+		{% endblock body %}
+	</body>
+</html>

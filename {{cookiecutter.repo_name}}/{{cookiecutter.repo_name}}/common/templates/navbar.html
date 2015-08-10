@@ -1,0 +1,45 @@
+{% block navbar %}
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+					{{cookiecutter.project_name}}
+				</a>
+
+				{% if user %}
+					<a class="navbar-brand" href="/users/home/">
+						Home
+					</a>
+				{% endif %}
+
+            </div>
+            <div class="navbar-collapse collapse">
+				{% if user %}
+					<ul class="nav navbar-right">
+						<a href="/users/logout/">
+							<button type="button" class="btn btn-danger navbar-btn">Logout</button>
+						</a>
+					</ul>
+				{% else %}
+					<ul class="nav navbar-right">
+						<a href="/users/signup/">
+							<button type="button" class="btn btn-success navbar-btn">Sign Up</button>
+						</a>
+					</ul>
+
+					<ul class="nav navbar-right">
+						<a href="/users/signin/">
+							<button type="button" class="btn btn-default navbar-btn">Sign in</button>
+						</a>
+					</ul>
+				{% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock navbar%}
