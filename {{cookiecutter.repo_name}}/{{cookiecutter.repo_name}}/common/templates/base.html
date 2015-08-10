@@ -1,9 +1,16 @@
+{% raw %}
 <!DOCTYPE html>
 <html>
 	<head>
 		{% block head %}
 			<meta charset=utf-8 />
-			<title>{% block title %}{{cookiecutter.project_name}}{% endblock title %}</title>
+			<title>
+				{% block title %}
+					{% endraw %}
+					{{cookiecutter.project_name}}
+					{% raw %}
+				{% endblock title %}
+			</title>
 			{% block style %}
 				<link href="{{app.cfg.STATIC_PREFIX}}/bootstrap.min.css" rel="stylesheet" media="screen">
 			{% endblock style %}
@@ -39,3 +46,4 @@
 		{% endblock body %}
 	</body>
 </html>
+{% endraw %}
