@@ -6,9 +6,9 @@ A [cookiecutter](https://github.com/audreyr/cookiecutter) template for [Muffin](
 	* [jQuery](https://jquery.com/) v1.11.3.
 	* [Twitter Bootstrap](http://getbootstrap.com/) v3.3.5.
 * Muffin Stack:
-	* [Muffin](https://github.com/klen/muffin) v0.0.105
-	* [Muffin-Jinja2](https://github.com/klen/muffin-jinja2) v0.0.11
-	* [Muffin-Peewee](https://github.com/klen/muffin-peewee) v0.0.46
+	* [Muffin](https://github.com/klen/muffin) v0.1.4
+	* [Muffin-Jinja2](https://github.com/klen/muffin-jinja2) v0.1.0
+	* [Muffin-Peewee](https://github.com/klen/muffin-peewee) v0.2.2
 	* [Muffin-Session](https://github.com/klen/muffin-session) v0.0.8
 * User `SignIn` and `SignUp` with session control.
 * Custom middlewares and generic handlers.
